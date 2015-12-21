@@ -52,16 +52,38 @@
       "react-intl": "npm:react-intl@2.0.0-beta-1",
       "react-redux": "npm:react-redux@^4.0.0",
       "react-router": "npm:react-router@^1.0.2",
+      "react-semantify": "npm:react-semantify@^0.4.1",
       "react-tap-event-plugin": "npm:react-tap-event-plugin@^0.2.1",
       "redux": "npm:redux@^3.0.4",
       "redux-logger": "npm:redux-logger@^2.0.4",
       "redux-simple-router": "npm:redux-simple-router@^0.0.7",
-      "redux-thunk": "npm:redux-thunk@^1.0.0"
+      "redux-thunk": "npm:redux-thunk@^1.0.0",
+      "semantic-ui": "github:Semantic-Org/Semantic-UI@^2.1.7"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
       "core-js": "npm:core-js@^1.1.4"
+    },
+    "overrides": {
+      "github:Semantic-Org/Semantic-UI@2.1.7": {
+        "directories": {
+          "lib": "dist"
+        },
+        "main": "semantic",
+        "shim": {
+          "semantic": {
+            "deps": [
+              "jquery",
+              "semantic-ui/semantic.css!"
+            ]
+          }
+        },
+        "dependencies": {
+          "jquery": "github:components/jquery",
+          "css": "github:systemjs/plugin-css"
+        }
+      }
     }
   }
 }

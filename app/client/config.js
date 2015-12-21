@@ -27,6 +27,7 @@ System.config({
     "react-intl": "npm:react-intl@2.0.0-beta-1",
     "react-redux": "npm:react-redux@4.0.2",
     "react-router": "npm:react-router@1.0.2",
+    "react-semantify": "npm:react-semantify@0.4.1",
     "react-tap-event-plugin": "npm:react-tap-event-plugin@0.2.1",
     "redux": "npm:redux@3.0.5",
     "redux-devtools": "npm:redux-devtools@3.0.0-beta-2",
@@ -35,6 +36,11 @@ System.config({
     "redux-logger": "npm:redux-logger@2.3.1",
     "redux-simple-router": "npm:redux-simple-router@0.0.7",
     "redux-thunk": "npm:redux-thunk@1.0.2",
+    "semantic-ui": "github:Semantic-Org/Semantic-UI@2.1.7",
+    "github:Semantic-Org/Semantic-UI@2.1.7": {
+      "css": "github:systemjs/plugin-css@0.1.20",
+      "jquery": "github:components/jquery@2.1.4"
+    },
     "github:capaj/systemjs-hot-reloader@0.5.1": {
       "debug": "npm:debug@2.2.0",
       "socket.io-client": "github:socketio/socket.io-client@1.3.7",
@@ -188,6 +194,11 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "stream": "github:jspm/nodelibs-stream@0.1.0",
       "string_decoder": "github:jspm/nodelibs-string_decoder@0.1.0"
+    },
+    "npm:classnames@2.2.1": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:constants-browserify@0.0.1": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
@@ -451,6 +462,11 @@ System.config({
       "invariant": "npm:invariant@2.2.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "warning": "npm:warning@2.1.0"
+    },
+    "npm:react-semantify@0.4.1": {
+      "classnames": "npm:classnames@2.2.1",
+      "react": "npm:react@0.14.3",
+      "react-dom": "npm:react-dom@0.14.3"
     },
     "npm:react-tap-event-plugin@0.2.1": {
       "fbjs": "npm:fbjs@0.2.1",
