@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   cache = -1
 }
-const server = httpServer.createServer([{
+const server = httpServer.createServer({
   root: 'app/client',
   cache: cache,
   robots: true,
@@ -15,8 +15,8 @@ const server = httpServer.createServer([{
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Credentials': 'true'
   }
-}])
+})
 
-require('chokidar-socket-emitter')({app: server.server})
+require('chokidar-socket-emitter')({app: server.server});
 
 server.listen(3000)
