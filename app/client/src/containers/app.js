@@ -1,8 +1,10 @@
 import React, { Component, PropTypes } from 'react';
+import Radium from 'radium';
 import { connect } from 'react-redux';
 import { incrementCounter } from '../actions/counter';
 import { Link } from 'react-router';
 
+@Radium
 class App extends Component {
     constructor(props) {
         super(props);
