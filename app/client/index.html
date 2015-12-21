@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reduxiplate</title>
+</head>
+<body>
+
+
+  <!--REPLACE-->
+  <div class="container"></div>
+  <!--REPLACE-END-->
+
+
+  <!-- JSPM -->
+  <script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+
+  <script>
+    var readyForMainLoad
+    if (location.origin.match(/localhost/)) {
+      System.trace = true
+      readyForMainLoad = System.import('capaj/systemjs-hot-reloader').then(function(HotReloader){
+        hr = new HotReloader.default('http://localhost:3000')  // chokidar-socket-emitter port
+      })
+    }
+    Promise.resolve(readyForMainLoad).then(() => {
+      System.import('src/main').then(function () {
+      console.log('ran at ', new Date())
+    })
+    })
+  </script>
+
+
+</body>
+</html>
